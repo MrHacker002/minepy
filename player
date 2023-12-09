@@ -1,0 +1,10 @@
+from direct.actor.Actor import Actor
+class Player:
+    def __init__(self, pos, map):
+        self.player = Actor('sources/steve.fbx')
+        self.player.setTexture(loader.loadTexture('sources/steve.png'))
+        self.player.setPos(8,8,5.3)
+        self.player.setScale(0.05,0.05,0.05)
+        self.player.setHpr(0,90,0)
+        self.player.reparentTo(render)
+        self.map = map
